@@ -20,7 +20,8 @@ class IndexController extends Controller
         // $setting = $this->setting();
         // $posts = Post::where('status', 1)->orderBy('published_at', 'DESC')->limit(3)->get();
         // return view('welcome', compact('setting', 'posts'));
-        return view('layouts.startbootstrap.welcome');
+        $setting = $this->setting();
+        return view('layouts.startbootstrap.welcome', compact('setting'));
     }
 
     public function blog()
